@@ -1,12 +1,25 @@
-import Function from "./components/Function"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./page/Home"
 import NavBar from "./components/NavBar"
+import Footer from "./components/Footer"
+import User from "./page/User"
+import CreateData from "./page/CreateData";
 
 function App() {
 
   return (
     <>
+    <BrowserRouter>
     <NavBar />
-    <Function />
+    <Routes>
+
+    <Route path="/" element={<Home />} />
+    <Route path="/user" element={<User />}/>
+    <Route path="/senddata" element={<CreateData />} />
+
+    </Routes>
+    <Footer />
+    </BrowserRouter>
     </>
   )
 }
