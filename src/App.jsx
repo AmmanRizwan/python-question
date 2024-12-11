@@ -9,7 +9,6 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
     <NavBar />
     <Routes>
 
@@ -19,7 +18,6 @@ function App() {
 
     </Routes>
     <Footer />
-    </BrowserRouter>
     </>
   )
 }
