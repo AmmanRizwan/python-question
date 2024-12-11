@@ -6,15 +6,15 @@ const User = () => {
   const [data, setData] = useState(null);
 
   useEffect(()  => {
-    fetch('https://question-server-fpyn.onrender.com/api/userdata/')
+    fetch('https://question-server-fpyn.onrender.com/api/data/')
     .then((response) => response.json())
     .then((data) => setData(data))
     .catch((err) => console.log("Error Fetching Data", err));
-  })
+  }, [])
 
   const handleDelete = async (keyId) => {
     try {
-      const response = await fetch(`https://question-server-fpyn.onrender.com/api/userdata/${keyId}`,
+      const response = await fetch(`https://question-server-fpyn.onrender.com/api/data/${keyId}`,
         {
           header: {
             "Content-Type": 'application/json',

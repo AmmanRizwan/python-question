@@ -9,7 +9,7 @@ const CreateData = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://question-server-fpyn.onrender.com/api/userdata",
+      const res = await fetch("https://question-server-fpyn.onrender.com/api/data",
         {
           method: "POST",
           headers: {"Content-Type": "application/json"},
