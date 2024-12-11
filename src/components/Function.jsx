@@ -42,9 +42,9 @@ const Function = () => {
 
         <ul role="list" className="select-none mt-6 list-disc marker:text-indigo-400 pl-3 space-y-3">
           {
-            questions.map((data, index) => {
+            questions.map((data, i) => {
               return (
-                <li key={index}>{data}</li>
+                <li key={i}>{data}</li>
               )
             }) 
           }
@@ -53,12 +53,12 @@ const Function = () => {
         <div>
           <h3 className="text-white font-medium text-xl sm:text-4xl mt-10">Python Function</h3>
 
-          <ul role="list" className="select-none mt-6 list-disc marker:text-indigo-400 pl-3 space-y-3">
+          <ul className="select-none mt-6 list-disc marker:text-indigo-400 pl-3 space-y-3">
           {
-            f_question.map((data, index) => {
+            f_question.map((data, i) => {
               return (
-                <div>
-                  <li key={index}>{data}</li>
+                <div key={i}>
+                  <li>{data}</li>
                 </div>
               )
             }) 
@@ -71,10 +71,10 @@ const Function = () => {
       <h3 className="text-white font-medium text-xl sm:text-4xl my-10">Python Function:<br/> Examples 1</h3>
           <p className="font-sans font-medium">Add new element into the list Please Type this and run</p>
           <div className="font-medium p-3 bg-slate-700 rounded-xl mt-4">
-          <p>arr = [1, 2, 3, 4, 5, 6]</p>
-          <p>def add_element(arr, element):
-          <p className="pl-4">arr.append(element)</p>
-          </p>
+          <div>arr = [1, 2, 3, 4, 5, 6]</div>
+          <div>def add_element(arr, element):
+          <div className="pl-4">arr.append(element)</div>
+          </div>
           <p>print(arr)</p>
           </div>
       </div>
