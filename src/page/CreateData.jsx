@@ -12,10 +12,13 @@ const CreateData = () => {
       const res = await fetch("https://question-server-fpyn.onrender.com/api/data",
         {
           method: "POST",
-          headers: {"Content-Type": "application/x-www-form-urlencoded"},
+          headers: {"Content-Type": "application/json"},
           body: JSON.stringify(formData)
         });
         const result = await res.json();
+        if (!result) {
+          return console.log("Cannot Post Data");
+        }
         setFormData({question: "", code: ""});
         setPopUp(true);
     }
