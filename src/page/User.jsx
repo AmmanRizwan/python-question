@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { CgClose, CgMathPlus, CgRemove } from "react-icons/cg";
 import { FiAlertTriangle } from "react-icons/fi";
+import { useLocation } from "react-router-dom";
 
 const User = () => {
+  const location = useLocation();
   const [data, setData] = useState(null);
 
   useEffect(()  => {
-    fetch('https://question-server-fpyn.onrender.com/api/data/')
+    fetch('https://question-server-fpyn.onrender.com/api/data/', { method: "GET" })
     .then((response) => response.json())
     .then((data) => setData(data))
     .catch((err) => console.log("Error Fetching Data", err));
-  }, [])
+  }, [location])
 
   const handleDelete = async (keyId) => {
     try {
