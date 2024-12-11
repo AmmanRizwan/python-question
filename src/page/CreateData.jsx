@@ -23,7 +23,7 @@ const CreateData = () => {
         setPopUp(true);
     }
     catch (err) {
-      console.log("Error Posting Data");
+      console.log("Error Posting Data", err);
     }
   }
 

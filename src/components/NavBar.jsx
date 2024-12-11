@@ -1,8 +1,8 @@
 import React from "react";
-import { BiSend } from "react-icons/bi";
 import { BsSend } from "react-icons/bs";
-import { VscAccount, VscArchive } from "react-icons/vsc";
+import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+
 
 const NavBar = () => {
   return (
