@@ -10,7 +10,7 @@ const User = () => {
     .then((response) => response.json())
     .then((data) => setData(data))
     .catch((err) => console.log("Error Fetching Data", err));
-  })
+  }, [])
 
   const handleDelete = async (keyId) => {
     try {
