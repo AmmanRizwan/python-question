@@ -12,7 +12,7 @@ const CreateData = () => {
       const res = await fetch("https://question-server-fpyn.onrender.com/api/data",
         {
           method: "POST",
-          headers: {"Content-Type": "application/json"},
+          headers: {"Content-Type": "application/x-www-form-urlencoded"},
           body: JSON.stringify(formData)
         });
         const result = await res.json();

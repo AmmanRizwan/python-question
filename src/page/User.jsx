@@ -16,9 +16,6 @@ const User = () => {
     try {
       const response = await fetch(`https://question-server-fpyn.onrender.com/api/data/${keyId}`,
         {
-          header: {
-            "Content-Type": 'application/json',
-          },
           method: "DELETE"
         }
       );
